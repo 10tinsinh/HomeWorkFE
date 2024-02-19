@@ -1,0 +1,163 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullContant{
+    background-color: #333333;
+    height: 500px;
+    max-height: 100%;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 5px;
+
+    margin-top: 100px;
+}
+
+.userInfo{
+    height: 200px;
+    max-height: 100%;
+    width: 300px;
+    max-width: 100%;
+    
+}
+
+.menuSocial{
+    height: 300px;
+    max-height: 100%;
+    width: 300px;
+    max-width: 100%;
+    //background-color: yellow;
+}
+
+.useravatar{
+    height: 100px;
+    max-height: 100%;
+    width: 300px;
+    max-width: 100%;
+    
+    margin-bottom: 110px;
+}
+
+.useravatar img {
+    max-width: 20%;
+    height: auto; 
+    margin-bottom: 0px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: 120px;
+}
+
+
+.userName{
+    height: 35px;
+    max-height: 100%;
+    width: 300px;
+    max-width: 100%;
+
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+    font-family: "Arial", sans-serif; 
+}
+
+.userLocation{
+    height: 15px;
+    max-height: 100%;
+    width: 300px;
+    max-width: 100%;
+    
+}
+
+.userJob{
+    height: 50px;
+    max-height: 100%;
+    width: 300px;
+    max-width: 100%;
+    
+}
+
+.github{
+    background-color: #474747;
+    height: 45px;
+    max-height: 100%;
+    width: 230px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+    margin-left: 33px;
+}
+
+.fontendMentor{
+    background-color: #474747;
+    height: 45px;
+    max-height: 100%;
+    width: 230px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+    margin-left: 33px;
+}
+
+.linkedIn{
+    background-color: #474747;
+    height: 45px;
+    max-height: 100%;
+    width: 230px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+    margin-left: 33px;
+}
+
+.twitter{
+    background-color: #474747;
+    height: 45px;
+    max-height: 100%;
+    width: 230px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+    margin-left: 33px;
+}
+
+.instagram{
+    background-color: #474747;
+    height: 45px;
+    max-height: 100%;
+    width: 230px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+    margin-left: 33px;
+}
+
+h1 {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+}
+
+p{
+    font-size: 11px;
+    color:#DDDDDD;
+    text-align: center;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 12px;
+    color: greenyellow;
+    text-align: center;
+    line-height: 10px;
+    font-family: "Arial", sans-serif; 
+}
