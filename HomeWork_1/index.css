@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.full-contant {
+  background-color: #333333;
+  height: 500px;
+  max-height: 100%;
+  border-radius: 5px;
+  margin-top: 100px;
+  width: 300px;
+}
+
+.userInfo {
+  height: 200px;
+  max-height: 100%;
+}
+
+.useravatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.useravatar img {
+  max-width: 20%;
+  border-radius: 50%;
+}
+
+.userName {
+  max-height: 100%;
+  font-size: 23px;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+  font-family: "Arial", sans-serif;
+}
+
+.userLocation {
+  max-height: 100%;
+}
+
+h2 {
+  font-size: 12px;
+  color: greenyellow;
+  text-align: center;
+  line-height: 10px;
+  font-family: "Arial", sans-serif;
+}
+
+.userJob {
+  max-height: 100%;
+}
+
+.menuSocial {
+  height: 300px;
+  max-height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.github,
+.front-end-mentor,
+.linkedin,
+.twitter,
+.instagram {
+  background-color: #474747;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+}
+
+p {
+  font-size: 11px;
+  color: #dddddd;
+  text-align: center;
+  line-height: 30px;
+}
