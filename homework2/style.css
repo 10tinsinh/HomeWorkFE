@@ -16,6 +16,11 @@
   padding: 0;
 }
 
+@media only screen and (max-width: 375px) {
+  .content-image {
+    width: 311px;
+  }
+}
 body {
   font-family: young-serif;
   background-color: var(--eggshell-color);

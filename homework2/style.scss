@@ -18,6 +18,14 @@
 $width-content: 656px;
 $width-content-item: 600px;
 
+$width-content-itemmobile: 375px;
+  $width-content-itemmobile: 311px;
+@media only screen and (max-width: 375px) {
+  .content-image{
+    width: $width-content-itemmobile;
+}
+}
+
 body{
     font-family: young-serif;
     background-color: var(--eggshell-color);
