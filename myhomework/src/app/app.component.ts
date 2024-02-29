@@ -1,4 +1,3 @@
-import { query } from '@angular/animations';
 import { Component,OnInit} from '@angular/core';
 
 
@@ -54,7 +53,11 @@ export class AppComponent {
     }
 
     this.filteredProducts = this.products.filter(
-      e => e.name.toLowerCase().includes(keyWord)
+      e => e.name.toLowerCase().includes(keyWord) ||
+      e.description.toLowerCase().includes(keyWord) ||
+      e.price.toString().toLowerCase().includes(keyWord) ||
+      e.category.toLowerCase().includes(keyWord)
+
       );
   }
 
