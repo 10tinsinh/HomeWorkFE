@@ -31,6 +31,10 @@ export class AppComponent {
         category: 'Thời trang',
       },
     ];
+
+  categorys = this.products.map(e=>e.category);
+
+  filterCategory: string = '';
   
   searchQuery: string = '';
 
@@ -42,6 +46,19 @@ export class AppComponent {
 
   ngOnInit() {
     
+  }
+
+  onCategoryChange():void{
+    const categoryFillter = this.filterCategory.trim();
+
+    if(!categoryFillter){
+      this.filteredProducts = this.products;
+      return;
+    }
+    else{
+      this.filteredProducts = this.products.filter(e=>
+        e.category === this.filterCategory);
+    }
   }
 
   search(): void{

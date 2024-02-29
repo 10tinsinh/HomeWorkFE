@@ -1,5 +1,9 @@
 <h1>List Products</h1>
-<input type="text" [(ngModel)]="searchQuery" />
+<select [(ngModel)]="filterCategory" (change)="onCategoryChange()">
+  <option value="">All Categories</option>
+  <option *ngFor="let category of categorys" [value]="category">{{category}}</option>
+</select>
+<input type="text" [(ngModel)]="searchQuery" (keyup.enter)="search()"/>
 <button (click)="search()">Search</button>
 <ul>
   <li *ngFor="let product of filteredProducts"
