@@ -1,5 +1,11 @@
 import { Component,OnInit} from '@angular/core';
 
+interface IProduct{
+  name: string;
+  description: string;
+  price: number;
+  category: string
+}
 
 @Component({
   selector: 'app-root',
@@ -10,7 +16,7 @@ import { Component,OnInit} from '@angular/core';
 export class AppComponent {
   title = 'myhomework';
 
-  products = 
+  products :IProduct[]=
     [
       {
         name: 'Điện thoại iPhone 14',
@@ -38,7 +44,7 @@ export class AppComponent {
   
   searchQuery: string = '';
 
-  filteredProducts: any[];
+  filteredProducts: IProduct[];
 
   constructor(){
     this.filteredProducts = this.products;
@@ -48,16 +54,22 @@ export class AppComponent {
     
   }
 
-  onCategoryChange():void{
-    const categoryFillter = this.filterCategory.trim();
 
-    if(!categoryFillter){
+
+
+  onCategoryChange(text:Event):void{
+
+    const data = (text.target) as HTMLInputElement;
+
+    const categoryFillter = data.value.trim();
+
+    if(categoryFillter === "All"){
       this.filteredProducts = this.products;
       return;
     }
     else{
       this.filteredProducts = this.products.filter(e=>
-        e.category === this.filterCategory);
+        e.category === categoryFillter);
     }
   }
 
