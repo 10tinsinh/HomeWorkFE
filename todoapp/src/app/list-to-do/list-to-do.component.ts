@@ -10,10 +10,13 @@ import { Items } from './list-to-do.model';
 export class ListToDoComponent {
   items :Items[] = [];
 
+  countItems : number = 0;
   ngOnInit(): void {
     // Thêm một phần tử mới vào mảng items khi component được khởi tạo
     this.items.push(new Items('One', true));
     this.items.push(new Items('Two', true));
+    this.items.push(new Items('Three', true));
+    this.countItems = this.items.length;
   }
 
  
