@@ -1,5 +1,5 @@
 <div class="main">
   <app-header></app-header>
-<app-input></app-input>
-<app-list-to-do></app-list-to-do>
+<app-input (itemInput)=inputItem($event)></app-input>
+<app-list-to-do [itemInputParent]="itemOutput"></app-list-to-do>
 </div>

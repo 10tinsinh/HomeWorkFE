@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class InputComponent {
 
+  
   hideCircle: boolean = false;
+  
+  @Output() itemInput = new EventEmitter<string>();
+
+  itemText:string='';
 
   hidePlaceholderCircle() {
     this.hideCircle = true;
@@ -15,5 +20,10 @@ export class InputComponent {
 
   showPlaceholderCircle() {
     this.hideCircle = false;
+  }
+
+  addItem(): void{
+    this.itemInput.emit(this.itemText);
+    this.itemText = '';
   }
 }

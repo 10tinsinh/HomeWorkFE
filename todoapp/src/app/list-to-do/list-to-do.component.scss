@@ -40,6 +40,23 @@
     border-radius: 50%;
 }
 
+.li-empty{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+.li-empty li{
+    border-bottom: 1px solid #ccc; 
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
 .list-footer{
     border-bottom: 1px solid #ccc; 
     height: 64px;

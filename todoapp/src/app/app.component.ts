@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todoapp';
+
+  itemOutput = '';
+
+  inputItem(item: string){
+    this.itemOutput = item;
+    console.log('parent:' + this.itemOutput);
+    
+  }
 }

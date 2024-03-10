@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, Input, OnChanges, OnInit,SimpleChanges } from '@angular/core';
 import { Items } from './list-to-do.model';
 
 @Component({
@@ -7,17 +7,37 @@ import { Items } from './list-to-do.model';
   styleUrls: ['./list-to-do.component.scss']
 })
 
-export class ListToDoComponent {
+export class ListToDoComponent  {
   items :Items[] = [];
+  itemsEmpty :Items[] = [];
+
+
+  @Input() set itemInputParent(value:string){
+    console.log('child:'+ value);
+    if(value !== '')
+    {
+      this.addItem(value);
+    }
+  }
+  
 
   countItems : number = 0;
   ngOnInit(): void {
-    // Thêm một phần tử mới vào mảng items khi component được khởi tạo
-    this.items.push(new Items('One', true));
-    this.items.push(new Items('Two', true));
-    this.items.push(new Items('Three', true));
+    
     this.countItems = this.items.length;
+    if(this.countItems === 0)
+    {
+      this.itemsEmpty.push(new Items('Empty', true))
+    }
+    else{
+      this.itemsEmpty = [];
+    }
+
   }
 
- 
+  addItem(itemAdd:string):void{
+    this.items.push(new Items(itemAdd, true));
+    this.countItems = this.items.length;
+    // this.itemInputParent = '';
+  }
 }
