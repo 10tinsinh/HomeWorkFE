@@ -1,55 +1,50 @@
-@media screen and (max-width: 400px)
-{
-    .h1{
-        font-size: 12px;
-    }
+@media screen and (max-width: 400px) {
+  .h1 {
+    font-size: 12px;
+  }
 }
 
-.header{
-    position: relative;
-    width: 100%;
-    height: auto;
+.header {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
-.img-header{
-    width: 100%;
-    height: auto;
+.img-header {
+  width: 100%;
+  height: auto;
 }
 
-.img-header img{
-    width: 100%;
-    height: auto;
+.img-header img {
+  width: 100%;
+  height: auto;
 }
 
-.cover-title{
-    width: 100%;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.cover-title {
+  width: 100%;
+  text-align: center;
 }
 
-.title{
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 7%;
-    padding-left: 22%;
+.title {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 7%;
+  padding-left: 22%;
 }
 
-h1{
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 40px;
+h1 {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
 }
 
-.img-moon{
-    width: 50%;
-    height: 100%;
+.img-moon {
+  width: 50%;
+  height: 100%;
 }
 
-.img-moon img{
-    width: 5%;
+.img-moon img {
+  width: 5%;
 }

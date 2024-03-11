@@ -1,5 +1,17 @@
 <div class="main">
   <app-header></app-header>
-<app-input (itemInput)=inputItem($event)></app-input>
-<app-list-to-do [itemInputParent]="itemOutput"></app-list-to-do>
+  <div class="wrap-todo">
+    <div class="wrap">
+      <div class="title">
+        <div class="wrap-title">
+          <h1>T O D O</h1>
+          <div class="img-moon">
+            <img src="../assets/images/icon-moon.svg" />
+          </div>
+        </div>
+      </div>
+      <app-input (itemInput)="inputItem($event)"></app-input>
+      <app-list-to-do [listTodo]="listTodo"></app-list-to-do>
+    </div>
+  </div>
 </div>
