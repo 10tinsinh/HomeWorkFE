@@ -6,13 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todoapp';
-
-  itemOutput = '';
-
-  inputItem(item: string){
-    this.itemOutput = item;
-    console.log('parent:' + this.itemOutput);
-    
-  }
+  
 }

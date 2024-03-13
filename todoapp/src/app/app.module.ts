@@ -3,22 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { InputComponent } from './input/input.component';
-import { ListToDoComponent } from './list-to-do/list-to-do.component';
 import { FormsModule } from '@angular/forms';
+import { AppTodoInputComponent } from './app-todo-input/app-todo-input.component';
+import { AppTodoListsComponent } from './app-todo-lists/app-todo-lists.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    InputComponent,
-    ListToDoComponent
+    AppTodoInputComponent,
+    AppTodoListsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
