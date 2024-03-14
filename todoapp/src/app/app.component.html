@@ -8,8 +8,11 @@
         <h1>T O D O</h1>
        <img src="../assets/images/icon-moon.svg" alt="moon">
       </div>
-      <app-app-todo-input></app-app-todo-input>
-      <app-app-todo-lists></app-app-todo-lists>
+      <app-app-todo-input (itemInput)="inputItem($event)"></app-app-todo-input>
+      <app-app-todo-lists 
+        [lists]="listTodo"
+        [countItems]="countItem"
+      ></app-app-todo-lists>
     </div>
   </div>
 </div>

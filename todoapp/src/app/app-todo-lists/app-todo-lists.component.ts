@@ -1,4 +1,4 @@
-import { Component,NgModule } from '@angular/core';
+import { Component,Input,NgModule } from '@angular/core';
 import { ListToDo } from '../list-to-do.model';
 
 @Component({
@@ -8,11 +8,13 @@ import { ListToDo } from '../list-to-do.model';
 })
 export class AppTodoListsComponent {
   listTodo : ListToDo[] = [];
-  countItems : number = 0;
+
+  @Input() lists: ListToDo[] = [];
+  @Input() countItems: number = 0;
+
   
   ngOnInit():void{
-    this.listTodo.push(new ListToDo('Cuong',0));
-    this.listTodo.push(new ListToDo('Cuong 2',0));
+    this.listTodo = this.lists;
     this.countItems = this.listTodo.length;
   }
 }

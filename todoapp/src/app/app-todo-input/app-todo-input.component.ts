@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-app-todo-input',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-todo-input.component.scss']
 })
 export class AppTodoInputComponent {
+  itemText : string = '';
 
+  @Output() itemInput = new EventEmitter<string>();
+
+  addItem(): void {
+    this.itemInput.emit(this.itemText);
+    this.itemText = '';
+  }
 }
