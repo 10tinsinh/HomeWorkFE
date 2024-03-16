@@ -1,10 +1,11 @@
 <div class="list">
     <div class="list-item">
         <ul>
-            <li *ngFor="let item of listTodo">
+            <li *ngFor="let item of listTodo"
+                [ngClass]="{'style-item': item.isChecked}">
                 <div class="checkbox">
                     <label class="container">
-                        <input type="checkbox" >
+                        <input type="checkbox" id="myCheckbox-{{item.id}}" [(ngModel)]="item.isChecked">
                         <span class="checkmark"></span>
                     </label>
                 </div>

@@ -1,4 +1,4 @@
-import { Component,Input,NgModule } from '@angular/core';
+import { Component,Input, NgModule } from '@angular/core';
 import { ListToDo } from '../list-to-do.model';
 
 @Component({
@@ -8,7 +8,9 @@ import { ListToDo } from '../list-to-do.model';
 })
 export class AppTodoListsComponent {
   listTodo : ListToDo[] = [];
+  isCheckAll : boolean = false;
 
+  
   @Input() lists: ListToDo[] = [];
   @Input() countItems: number = 0;
 
