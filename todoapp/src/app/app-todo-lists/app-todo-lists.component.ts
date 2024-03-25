@@ -13,6 +13,7 @@ export class AppTodoListsComponent {
   
   @Input() lists: ListToDo[] = [];
   @Input() countItems: number = 0;
+  @Input() isDarkMode: boolean = false;
 
   
   ngOnInit():void{

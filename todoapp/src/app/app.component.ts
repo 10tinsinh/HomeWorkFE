@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Renderer2 } from '@angular/core';
 import { ListToDo } from './list-to-do.model';
 
 @Component({
@@ -10,6 +10,23 @@ export class AppComponent {
   listTodo : ListToDo[] = [];
   item : string = '';
   countItem : number = 0;
+  isDarkMode : boolean = false;
+
+  constructor(private renderer: Renderer2) {}
+
+  ngOnInit() {
+    
+  }
+
+  darkMode(){
+    this.isDarkMode = true;
+    this.renderer.setStyle(document.body, 'background-color', 'black');
+  }
+
+  lightMode(){
+    this.isDarkMode = false;
+    this.renderer.setStyle(document.body, 'background-color', '#ccc');
+  }
 
   inputItem(item: string){
     if(item !== ''){
@@ -17,6 +34,20 @@ export class AppComponent {
       this.listTodo.push(new ListToDo(idTmp ,item, 0));
       this.countItem = this.listTodo.length;
     }
+  }
+
+  isCheckAll(isChecked : boolean){
+    if(isChecked){
+      this.listTodo.forEach(e=>
+        e.isChecked = true
+        
+      );
+    }
+    else{
+      this.listTodo.forEach(e=>e.isChecked = false);
+    }
+
+    console.log(this.listTodo);
   }
 
   generateId(listTodo: ListToDo[]): number {

@@ -1,7 +1,7 @@
-<div class="input-main">
+<div class="input-main" [ngClass]="{'style-darkmode': isDarkMode}">
     <div class="input-radio-button">
         <label class="container">
-            <input type="checkbox" >
+            <input type="checkbox" [(ngModel)]="isChecked" (change)="checked()"> 
             <span class="checkmark"></span>
           </label>
     </div>

@@ -1,15 +1,22 @@
-<div class="todo-main">
+<div class="todo-main"[ngClass]="{'style-darkmode': isDarkMode}">
   <div class="todo-image">
-    <img src="../assets/images/bg-desktop-light.jpg" alt="image">
+    <img *ngIf="!isDarkMode" src="../assets/images/bg-desktop-light.jpg" alt="image">
+    <img *ngIf="isDarkMode" src="../assets/images/bg-desktop-dark.jpg" alt="image">
   </div>
-  <div class="todo-content">
+  <div class="todo-content" >
     <div class="content">
       <div class="todo-content-title">
         <h1>T O D O</h1>
-       <img src="../assets/images/icon-moon.svg" alt="moon">
+       <img *ngIf="!isDarkMode" src="../assets/images/icon-moon.svg" alt="moon" (click)="darkMode()">
+       <img *ngIf="isDarkMode" src="../assets/images/icon-sun.svg" alt="sun" (click)="lightMode()">
       </div>
-      <app-app-todo-input (itemInput)="inputItem($event)"></app-app-todo-input>
+      <app-app-todo-input 
+      [isDarkMode]="isDarkMode"
+      (itemInput)="inputItem($event)"
+      (isCheckAll)="isCheckAll($event)"
+      ></app-app-todo-input>
       <app-app-todo-lists 
+        [isDarkMode]="isDarkMode"
         [lists]="listTodo"
         [countItems]="countItem"
       ></app-app-todo-lists>

@@ -7,6 +7,37 @@
     border-radius: 5px;
 }
 
+.style-darkmode{
+    background-color: #393A4B;
+
+    .list-footer{
+        color: #7b7b7e;
+    }
+
+    .style-item{
+        h2{
+            color: #7b7b7e;
+            text-decoration: line-through;
+            text-decoration-color: #7b7b7e;
+        }
+    }
+
+    .list-item{
+        color: #ccc;
+    }
+
+    ul{
+        li{
+            .checkbox{
+                .checkmark {
+                    background-color: #393A4B;
+                    border: 1px solid #ccc;
+                }
+            }
+        }
+    }
+}
+
 .list-item{
     width: 100%;
 }
@@ -59,8 +90,9 @@ ul{
                 left: 0;
                 height: 25px;
                 width: 25px;
-                background-color: #f7f3f3;
+                background-color: white;
                 border-radius: 50%;
+                border: 1px solid #ccc;
             }
             
             /* On mouse-over, add a grey background color */
