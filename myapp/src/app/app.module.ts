@@ -7,6 +7,8 @@ import { MenuComponent } from './menu/menu.component';
 import { InputComponent } from './input/input.component';
 import { TrendingComponent } from './trending/trending.component';
 import { RecommendedComponent } from './recommended/recommended.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,16 @@ import { RecommendedComponent } from './recommended/recommended.component';
     MenuComponent,
     InputComponent,
     TrendingComponent,
-    RecommendedComponent
+    RecommendedComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
